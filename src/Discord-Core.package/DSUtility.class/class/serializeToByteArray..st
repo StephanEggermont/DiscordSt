@@ -4,9 +4,8 @@ serializeToByteArray: anObject
 	It returns bytes representing the serialized object."
 	| stream serializer |
 	stream := ByteArray new writeStream.
-	serializer := FLSerializer newDefault.		
-	serializer
-		showProgress;
-		serialize: anObject
-		on: stream.
+	serializer := FLSerializer new
+		object: anObject;
+		onStream: stream;
+		serialize.
 	^ stream contents.
