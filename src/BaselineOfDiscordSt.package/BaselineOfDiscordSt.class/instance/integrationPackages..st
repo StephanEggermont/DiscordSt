@@ -5,7 +5,6 @@ integrationPackages: spec
 			package: #'Discord-Tools' with: [
 				"It depends on GT-Inspector and GT-Playground that are standard tools"
 				spec 
-					preLoadDoIt: #preLoadTonel:;
 					requires: #( #'Discord-Core' ) ];
 			package: #'Discord-Tools-Tests' with: [
 				spec requires: #( #'Discord-Tools' ) ];
@@ -31,39 +30,8 @@ integrationPackages: spec
 				spec requires: #( 
 					#'Discord-Core' #'Discord-Registry-Core' ) ];
 			
-			package: #'Discord-Integration-Morph' with: [ 
-				spec requires: #( 
-					#'Discord-Announcements' #'Discord-Mock' #'Discord-Registry-Core' 
-					#'Discord-Send-Items' #'Discord-Tools' ) ];
-			
 			package: #'Discord-Integration-Gif' with: [ 
-				spec requires: #( #'Discord-Send-Items' #'Discord-Integration-Morph' ) ];
+				spec requires: #( #'Discord-Send-Items' #'Discord-Integration-Morph' ) ]
 
-			package: #'Discord-Integration-Morph-Tests' with: [ 
-				spec requires: #( #'Discord-Integration-Morph' ) ];
 
-			package: #'Discord-Integration-Rubric' with: [ 
-				spec requires: #( 
-					#'Discord-Core' 
-					#'Discord-Integration-Core' 
-					#'Discord-Integration-Morph'
-					#'Discord-Integration-Gif' ) ];
-			
-			package: #'Discord-Integration-Playground' with: [ 
-				spec
-					preLoadDoIt: #preLoadPlayground:;
-					requires: #( 
-						#'Discord-Core' #'Discord-Integration-Core' 
-						#'Discord-Integration-Morph' 
-						#'Discord-Integration-Gif'
-						#'Discord-Send-Items' #'Discord-Tools' ) ];
-
-			package: #'Discord-Integration-Calypso' with: [ 
-				spec
-					requires: #( 
-						#'Discord-Core' #'Discord-Integration-Core' 
-						#'Discord-Integration-Morph' 
-						#'Discord-Integration-Gif'
-						#'Discord-Send-Items' #'Discord-Tools'
-						#'Discord-Integration-Rubric' ) ]
 	].

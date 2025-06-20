@@ -17,25 +17,8 @@ groups: spec
 			group: #'tests-core' with: #( #'tests-webhook' #'tests-client' );
 			group: #'core' with: #( #'src-core' #'tests-core' );
 
-			"world menu"
-			group: #'ui-worldmenu' with: #( #'Discord-WorldMenu' );
-
 			"Downloader"
 			group: #'src-downloader' with: #( #'Discord-Downloader' #'Discord-Research' );
-
-			"Integration - UI - Morphic" 
-			group: #'integration-rubric' with: #( #'Discord-Integration-Rubric' #'Discord-Research' );
-			group: #'integration-calypso' with: #( #'Discord-Integration-Calypso' #'Discord-Research' );
-			group: #'integration-playground' with: #( 
-				#'Discord-Integration-Playground' #'Discord-Research' );
-			group: #'src-ui-morphic' with: (self mayRequireCalypso: spec);
-			group: #'tests-ui-morphic' with: #( 
-				#'src-ui-morphic'
-				#'tests-core'
-				#'Discord-Tools-Tests'
-				#'Discord-Downloader-Tests' #'Discord-Integration-Morph-Tests'
-				#'Discord-Send-Items-Tests' #'Discord-Registry-Core-Tests' );
-			group: #'ui-morphic' with: #( #'src-ui-morphic' #'tests-ui-morphic' );
 
 			"UI - Brick"
 			group: #'src-ui-brick' with: #( #'Discord-UI-Brick' );
@@ -44,7 +27,7 @@ groups: spec
 			
 			"light options (no Bloc/Brick)"
 			group: #'src-light' with: #( 
-				#'src-core' #'src-ui-morphic' #'src-downloader' );
+				#'src-core' #'src-downloader' );
 			group: #'tests-light' with: #( 
 				#'tests-core' #'tests-ui-morphic' );
 			group: #'light' with: #( #'src-light' #'tests-light' );
