@@ -2,7 +2,6 @@ private
 corePackages: spec
 	spec for: #'common' do: [
 		spec
-			package: #'Discord-WorldMenu';
 			package: #'Discord-Announcements';
 
 			package: #'Discord-Core' with: [
@@ -23,7 +22,7 @@ corePackages: spec
 				spec requires: #( #'Discord-Client' #'Discord-Core-Tests' #'Discord-Gateway-Tests' ). ];
 
 			package: #'Discord-Gateway' with: [
-				spec requires: #( #'Discord-Announcements' #'Discord-Core' #'ZincHTTPComponents' ). ];
+				spec requires: #( #'Discord-Announcements' #'Discord-Core' ). ];
 			package: #'Discord-Gateway-Tests' with: [
 				spec requires: #( #'Discord-Gateway' #'Discord-Core-Tests' ). ]
 	].

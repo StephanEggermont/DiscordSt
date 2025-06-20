@@ -31,7 +31,7 @@ integrationPackages: spec
 					#'Discord-Core' #'Discord-Registry-Core' ) ];
 			
 			package: #'Discord-Integration-Gif' with: [ 
-				spec requires: #( #'Discord-Send-Items' #'Discord-Integration-Morph' ) ]
+				spec requires: #( #'Discord-Send-Items'  ) ]
 
 
 	].

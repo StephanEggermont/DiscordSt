@@ -29,7 +29,7 @@ groups: spec
 			group: #'src-light' with: #( 
 				#'src-core' #'src-downloader' );
 			group: #'tests-light' with: #( 
-				#'tests-core' #'tests-ui-morphic' );
+				#'tests-core'  );
 			group: #'light' with: #( #'src-light' #'tests-light' );
 			
 			"full (all packages including Bloc/Brick) options"

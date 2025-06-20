@@ -5,7 +5,7 @@ downloaderPackages: spec
 			package: #'Discord-Downloader' with: [ 
 				spec requires: #( 
 					#'Discord-Core' #'Discord-Integration-Core' 
-					#'Discord-Send-Items' #'Discord-Integration-Playground' ) ];
+					#'Discord-Send-Items'  ) ];
 			
 			package: #'Discord-Downloader-Tests' with: [ 
 				spec requires: #( #'Discord-Downloader' #'Discord-Core-Tests' ) ]
